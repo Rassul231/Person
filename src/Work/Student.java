@@ -2,7 +2,7 @@ package Work;
 
 class Student extends person {
     private double gpa;
-    private static final double STIPEND_AMOUNT = 36660.00;
+    private static final double stipend = 36660.00;
 
     public Student() {
         super();
@@ -15,7 +15,7 @@ class Student extends person {
 
     @Override
     public double getPaymentAmount() {
-        return (gpa > 2.67) ? STIPEND_AMOUNT : 0.0;
+        return (gpa > 2.67) ? stipend : 0.0;
     }
 
     @Override
