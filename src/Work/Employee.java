@@ -1,12 +1,12 @@
 package Work;
 class Employee extends person {
-    private String position;
-    private double salary;
+    private String position; // Employee's job
+    private double salary; // Employee earn
 
     public Employee() {
         super();
     }
-
+       // constructor for the Employee
     public Employee(String name, String surname, String position, double salary) {
         super(name, surname);
         this.position = position;
@@ -14,7 +14,7 @@ class Employee extends person {
     }
 
     @Override
-    public double getPaymentAmount() {
+    public double getPaymentAmount() {  // This method returns the value of the salary.
         return salary;
     }
 
