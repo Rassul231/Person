@@ -6,7 +6,7 @@ class person implements payable, Comparable<person> {
     private String surname;
 
     public person() {
-        this.id = idCounter++;
+        this.id = idCounter++; // making unique id for each person
     }
 
     public person(String name, String surname) {
@@ -14,19 +14,15 @@ class person implements payable, Comparable<person> {
         this.name = name;
         this.surname = surname;
     }
-
-    @Override
     public double getPaymentAmount() {
         return 0.0;
     }
-
     public String getPosition() {
         return "Student";
     }
 
-    @Override
     public String toString() {
-        return String.format("%s: %d. %s %s", getPosition(), id, name, surname);
+        return getPosition() + ": " + id + ". " + name + " " + surname;
     }
 
     public int getId() {
@@ -49,8 +45,7 @@ class person implements payable, Comparable<person> {
         this.surname = surname;
     }
 
-    @Override
-    public int compareTo(person o) {
+    public int compareTo(person o) { // salary comparison
         return Double.compare(this.getPaymentAmount(), o.getPaymentAmount());
     }
 }
