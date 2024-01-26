@@ -2,7 +2,7 @@ package Work;
 
 class Student extends person {
     private double gpa;
-    private static final double stipend = 36660.00;
+    private static final double stipend = 36660.00; // Scholarship is constant and cannot be changed
 
     public Student() {
         super();
@@ -15,11 +15,19 @@ class Student extends person {
 
     @Override
     public double getPaymentAmount() {
-        return (gpa > 2.67) ? stipend : 0.0;
+        double paymentAmount;  // Declaring a variable paymentAmount
+
+        if (gpa > 2.67) {
+            paymentAmount = stipend;  // Assigning a stipend if enough gpa
+        } else {
+            paymentAmount = 0.0;       // if Student do not have enough gpa he do not have scholarship
+        }
+
+        return paymentAmount;
     }
 
     @Override
     public String toString() {
-        return String.format("%s earns %.2f tenge", super.toString(), getPaymentAmount());
+        return (super.toString()+ " earns "+ getPaymentAmount()+ " tenge ");
     }
 }
