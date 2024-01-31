@@ -2,10 +2,7 @@ package Work;
 class Employee extends person {
     private String position; // Employee's job
     private double salary; // Employee earn
-
-    public Employee() {
-        super();
-    }
+    
        // constructor for the Employee
     public Employee(String name, String surname, String position, double salary) {
         super(name, surname);
