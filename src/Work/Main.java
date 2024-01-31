@@ -1,11 +1,6 @@
 package Work;
 import java.util.ArrayList;
 import java.util.Collections;
-// Interface defining a method to get the payment amount.
-interface payable {
-    double getPaymentAmount();
-}
-
 public class Main {
     // Creating a list to store person objects.
     public static void main(String[] args) {
