@@ -2,7 +2,6 @@ package Work;
 class Employee extends person {
     private String position; // Employee's job
     private double salary; // Employee earn
-    
        // constructor for the Employee
     public Employee(String name, String surname, String position, double salary) {
         super(name, surname);
@@ -22,6 +21,6 @@ class Employee extends person {
 
     @Override
     public String toString() {
-        return String.format("Employee: %s %s earns %.2f tenge", super.toString(), getPosition(),salary);
+        return ("Employee: " + super.toString()+ " earns "+ getPaymentAmount()+ " tenge ");
     }
 }
